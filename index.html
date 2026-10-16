@@ -66,8 +66,9 @@
       max-width: 1400px;
       margin: 0 auto;
       padding: 0 16px;
+      gap: 8px;
     }
-    .logo { display: flex; flex-direction: column; line-height: 1.15; }
+    .logo { display: flex; flex-direction: column; line-height: 1.15; flex-shrink: 1; min-width: 0; }
     .logo-main {
       font-family: 'Playfair Display', serif;
       font-size: 1.15rem;
@@ -98,7 +99,7 @@
       height: 2px;
       background: var(--gold);
     }
-    .header-actions { display: flex; align-items: center; gap: 8px; }
+    .header-actions { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
     .btn-phone {
       display: flex;
       align-items: center;
@@ -187,14 +188,14 @@
     .mobile-nav {
       display: none;
       position: fixed;
-      top: 64px; left: 0; right: 0;
+      top: 60px; left: 0; right: 0;
       background: var(--white);
       padding: 16px;
       box-shadow: var(--shadow-lg);
       z-index: 999;
       flex-direction: column;
       gap: 2px;
-      max-height: calc(100vh - 64px);
+      max-height: calc(100vh - 60px);
       overflow-y: auto;
       -webkit-overflow-scrolling: touch;
     }
@@ -208,7 +209,12 @@
       transition: var(--transition);
     }
     .mobile-nav a:hover { background: var(--off-white); color: var(--navy); }
-    .mobile-nav .btn-gold { margin-top: 10px; width: 100%; padding: 14px; }
+    .mobile-nav .btn-gold {
+      margin-top: 10px;
+      width: 100%;
+      padding: 14px;
+      flex-shrink: 0;
+    }
 
     /* ===== HERO ===== */
     .hero {
@@ -771,10 +777,11 @@
     /* ===== FLOATING CALL BUTTON ===== */
     .float-call {
       position: fixed;
-      bottom: 16px; left: 16px;
+      bottom: 16px; right: 16px;
       z-index: 1500;
       display: flex;
       align-items: center;
+      justify-content: center;
       gap: 8px;
       background: var(--gold);
       color: var(--white);
@@ -786,6 +793,7 @@
       transition: var(--transition);
     }
     .float-call:hover { background: var(--gold-dark); transform: translateY(-3px); }
+    .float-call i { font-size: 1rem; }
 
     /* ===== FOOTER ===== */
     .footer { background: var(--navy-dark); color: rgba(255,255,255,0.8); padding-top: 48px; }
@@ -933,6 +941,149 @@
     .enquire-modal .modal-content { max-width: 440px; }
     .enquire-modal .callback-form { box-shadow: none; padding: 28px 22px; }
 
+    /* ===== CONNECT POPUP ===== */
+    .connect-popup-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(10,22,40,0.75);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      z-index: 2500;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.35s ease;
+    }
+    .connect-popup-overlay.active { opacity: 1; visibility: visible; }
+    .connect-popup {
+      background: var(--white);
+      border-radius: 16px;
+      width: 100%;
+      max-width: 380px;
+      position: relative;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+      transform: scale(0.9) translateY(20px);
+      transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+      overflow: hidden;
+    }
+    .connect-popup-overlay.active .connect-popup { transform: scale(1) translateY(0); }
+    .connect-popup-close {
+      position: absolute;
+      top: 12px; right: 12px;
+      width: 32px; height: 32px;
+      background: rgba(255,255,255,0.2);
+      border: none;
+      border-radius: 50%;
+      color: var(--white);
+      font-size: 0.9rem;
+      cursor: pointer;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: var(--transition);
+    }
+    .connect-popup-close:hover { background: rgba(255,255,255,0.35); transform: rotate(90deg); }
+    .connect-popup-header {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-dark) 100%);
+      padding: 32px 24px 24px;
+      text-align: center;
+      color: var(--white);
+      position: relative;
+    }
+    .connect-popup-header::after {
+      content: '';
+      position: absolute;
+      bottom: -1px; left: 0; right: 0;
+      height: 20px;
+      background: var(--white);
+      border-radius: 20px 20px 0 0;
+    }
+    .connect-popup-icon {
+      width: 64px; height: 64px;
+      margin: 0 auto 14px;
+      background: var(--gold);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 8px 24px rgba(196,163,90,0.4);
+      animation: pulseGold 2s infinite;
+    }
+    .connect-popup-icon i { font-size: 1.6rem; color: var(--white); }
+    @keyframes pulseGold {
+      0%, 100% { box-shadow: 0 8px 24px rgba(196,163,90,0.4); }
+      50% { box-shadow: 0 8px 32px rgba(196,163,90,0.7); }
+    }
+    .connect-popup-header h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    .connect-popup-header p { font-size: 0.82rem; opacity: 0.8; font-weight: 300; }
+    .connect-popup-body {
+      padding: 4px 20px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      position: relative;
+      z-index: 1;
+    }
+    .connect-action {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 14px 16px;
+      border-radius: 12px;
+      border: 1.5px solid var(--gray-200);
+      background: var(--white);
+      cursor: pointer;
+      transition: var(--transition);
+      text-align: left;
+      width: 100%;
+      font-family: inherit;
+    }
+    .connect-action:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,0.1); }
+    .connect-action > i:first-child {
+      width: 42px; height: 42px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+    .connect-action div { flex: 1; }
+    .connect-action strong {
+      display: block;
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 2px;
+    }
+    .connect-action span { font-size: 0.75rem; color: var(--gray-600); }
+    .connect-arrow {
+      color: var(--gray-300);
+      font-size: 0.8rem;
+      transition: var(--transition);
+    }
+    .connect-action:hover .connect-arrow { color: var(--gold); transform: translateX(4px); }
+    .connect-call > i:first-child { background: rgba(196,163,90,0.15); color: var(--gold-dark); }
+    .connect-whatsapp > i:first-child { background: rgba(37,211,102,0.15); color: #25D366; }
+    .connect-enquire > i:first-child { background: rgba(10,22,40,0.08); color: var(--navy); }
+    .connect-popup-footer {
+      padding: 12px 20px 16px;
+      text-align: center;
+      font-size: 0.7rem;
+      color: var(--gray-600);
+      border-top: 1px solid var(--gray-200);
+    }
+    .connect-popup-footer i { color: var(--gold); margin-right: 4px; }
+
     /* Toast */
     .toast {
       position: fixed;
@@ -985,17 +1136,33 @@
       .hero-btns .btn-gold, .hero-btns .btn-outline { flex: 1 1 calc(50% - 6px); }
     }
     @media (max-width: 640px) {
-      .header-inner { height: 60px; padding: 0 14px; }
+      .header-inner { height: 60px; padding: 0 14px; gap: 8px; }
       .mobile-nav { top: 60px; max-height: calc(100vh - 60px); }
-      .logo-main { font-size: 1rem; }
-      .logo-sub { font-size: 0.45rem; }
-      .hero { min-height: auto; padding: 80px 0 32px; }
+      .logo { flex-shrink: 1; min-width: 0; }
+      .logo-main {
+        font-size: 0.95rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 150px;
+      }
+      .logo-sub {
+        font-size: 0.42rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 150px;
+      }
+      .header-actions .btn-gold { padding: 8px 12px; font-size: 0.72rem; }
+      .hero { min-height: auto; padding: 72px 0 24px; }
+      .hero-content { padding: 24px 16px; gap: 20px; }
       .hero h1 { font-size: 1.7rem; }
       .hero-sub { font-size: 0.9rem; }
       .hero-price { font-size: 0.78rem; padding: 6px 12px; }
-      .hero-features { grid-template-columns: 1fr; gap: 10px; }
-      .hero-btns { flex-direction: column; }
+      .hero-features { grid-template-columns: 1fr; gap: 10px; margin-bottom: 20px; }
+      .hero-btns { flex-direction: column; margin-bottom: 0; }
       .hero-btns .btn-gold, .hero-btns .btn-outline { width: 100%; flex: 1 1 100%; }
+      .callback-form { padding: 22px 18px 26px; }
       .highlights-grid { grid-template-columns: 1fr; }
       .highlight-item { border-right: none !important; }
       .highlight-item:last-child { border-bottom: none; }
@@ -1011,13 +1178,27 @@
       .location-map-card { flex-direction: column; align-items: flex-start; }
       .location-map-card .btn-gold { margin-left: 0; width: 100%; }
       .map-pin { display: none; }
-      .float-call { bottom: 12px; left: 12px; padding: 10px 14px; font-size: 0.75rem; }
+      .float-call {
+        bottom: 16px; right: 16px;
+        width: 52px; height: 52px;
+        padding: 0;
+        border-radius: 50%;
+      }
+      .float-call span { display: none; }
+      .float-call i { font-size: 1.15rem; }
       .toast { bottom: 72px; right: 12px; left: 12px; }
       .modal-content { max-height: 92vh; }
       .modal-body { padding: 20px 16px; }
+      .connect-popup { max-width: 100%; }
+      .connect-popup-header { padding: 28px 20px 22px; }
+      .connect-popup-header h3 { font-size: 1.25rem; }
+      .connect-popup-body { padding: 4px 16px 16px; gap: 8px; }
+      .connect-action { padding: 12px 14px; gap: 12px; }
+      .connect-action > i:first-child { width: 38px; height: 38px; font-size: 1rem; }
+      .connect-action strong { font-size: 0.88rem; }
     }
     @media (max-width: 360px) {
-      .logo-main { font-size: 0.9rem; }
+      .logo-main { font-size: 0.9rem; max-width: 130px; }
       .hero h1 { font-size: 1.5rem; }
       .amenities-grid { grid-template-columns: 1fr; }
     }
@@ -1632,8 +1813,8 @@
 </footer>
 
 <!-- ===== FLOATING CALL BUTTON ===== -->
-<a href="tel:9718111251" class="float-call">
-  <i class="fas fa-phone"></i> Call Now
+<a href="tel:9718111251" class="float-call" aria-label="Call Now">
+  <i class="fas fa-phone"></i> <span>Call Now</span>
 </a>
 
 <!-- ===== LIGHTBOX MODAL ===== -->
@@ -1719,11 +1900,56 @@
   </div>
 </div>
 
+<!-- ===== CONNECT POPUP ===== -->
+<div class="connect-popup-overlay" id="connectPopup">
+  <div class="connect-popup">
+    <button class="connect-popup-close" onclick="closeConnectPopup()" aria-label="Close">
+      <i class="fas fa-times"></i>
+    </button>
+    <div class="connect-popup-header">
+      <div class="connect-popup-icon">
+        <i class="fas fa-headset"></i>
+      </div>
+      <h3>Connect With Us</h3>
+      <p>Get instant details on pricing, floor plans & site visit</p>
+    </div>
+    <div class="connect-popup-body">
+      <a href="tel:9718111251" class="connect-action connect-call">
+        <i class="fas fa-phone-volume"></i>
+        <div>
+          <strong>Call Now</strong>
+          <span>97181 11251</span>
+        </div>
+        <i class="fas fa-chevron-right connect-arrow"></i>
+      </a>
+      <a href="https://wa.me/919718111251?text=Hi%2C%20I%20am%20interested%20in%20Indiabulls%20Heights%20Sector%20104.%20Please%20share%20details." target="_blank" rel="noopener" class="connect-action connect-whatsapp">
+        <i class="fab fa-whatsapp"></i>
+        <div>
+          <strong>WhatsApp</strong>
+          <span>Chat instantly</span>
+        </div>
+        <i class="fas fa-chevron-right connect-arrow"></i>
+      </a>
+      <button onclick="closeConnectPopup();openEnquireModal()" class="connect-action connect-enquire">
+        <i class="fas fa-file-alt"></i>
+        <div>
+          <strong>Request Details</strong>
+          <span>Get brochure & price list</span>
+        </div>
+        <i class="fas fa-chevron-right connect-arrow"></i>
+      </button>
+    </div>
+    <div class="connect-popup-footer">
+      <i class="fas fa-lock"></i> Your details are 100% safe with us
+    </div>
+  </div>
+</div>
+
 <!-- Toast -->
 <div class="toast" id="toast"><i class="fas fa-check-circle"></i> <span id="toastMsg">Success</span></div>
 
 <script>
-  // Sticky header + active nav
+  // ===== STICKY HEADER + ACTIVE NAV =====
   const header = document.getElementById('header');
   let ticking = false;
   window.addEventListener('scroll', () => {
@@ -1744,7 +1970,7 @@
     }
   }, { passive: true });
 
-  // Mobile menu
+  // ===== MOBILE MENU =====
   const hamburger = document.getElementById('hamburger');
   const mobileNav = document.getElementById('mobileNav');
   hamburger.addEventListener('click', () => {
@@ -1757,12 +1983,11 @@
     mobileNav.classList.remove('open');
     document.body.style.overflow = '';
   }
-  // Close mobile nav on link click (in case onclick not used)
   mobileNav.querySelectorAll('a').forEach(a => {
     a.addEventListener('click', () => closeMobile());
   });
 
-  // Modal helpers
+  // ===== MODAL HELPERS =====
   function openModal(id) {
     document.getElementById(id).classList.add('active');
     document.body.style.overflow = 'hidden';
@@ -1784,7 +2009,7 @@
   function openVideoModal() { openModal('videoModal'); }
   function closeVideoModal() { closeModal('videoModal'); }
 
-  // Floor plan modal
+  // ===== FLOOR PLAN MODAL =====
   function openFloorPlan(type) {
     const title = type === '2bhk' ? '2 BHK + Study Floor Plan (1500 sq.ft)' : '3 BHK Floor Plan (1850 sq.ft)';
     document.getElementById('fpModalTitle').textContent = title;
@@ -1792,7 +2017,7 @@
     openModal('fpModal');
   }
 
-  // Gallery lightbox
+  // ===== GALLERY LIGHTBOX =====
   const galleryImages = [
     'https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=1200&q=80',
     'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1200&q=80',
@@ -1806,7 +2031,7 @@
     openModal('lightboxModal');
   }
 
-  // Form validation
+  // ===== FORM VALIDATION =====
   function validateForm(formId, fields) {
     let valid = true;
     fields.forEach(f => {
@@ -1837,7 +2062,7 @@
     });
   }
 
-  // Hero callback form
+  // ===== HERO CALLBACK FORM =====
   document.getElementById('callbackForm').addEventListener('submit', function(e) {
     e.preventDefault();
     const fields = [
@@ -1852,7 +2077,7 @@
     }
   });
 
-  // Enquire form
+  // ===== ENQUIRE FORM =====
   document.getElementById('enquireForm').addEventListener('submit', function(e) {
     e.preventDefault();
     const fields = [
@@ -1867,7 +2092,7 @@
     }
   });
 
-  // Newsletter
+  // ===== NEWSLETTER =====
   document.getElementById('newsletterForm').addEventListener('submit', function(e) {
     e.preventDefault();
     const email = document.getElementById('newsEmail').value.trim();
@@ -1883,7 +2108,7 @@
     showToast('Successfully subscribed to newsletter!');
   });
 
-  // Toast
+  // ===== TOAST =====
   function showToast(message) {
     const t = document.getElementById('toast');
     document.getElementById('toastMsg').textContent = message;
@@ -1891,20 +2116,50 @@
     setTimeout(() => t.classList.remove('show'), 3500);
   }
 
-  // Keyboard close
+  // ===== KEYBOARD CLOSE =====
   document.addEventListener('keydown', e => {
     if (e.key === 'Escape') {
       ['lightboxModal','fpModal','videoModal','enquireModal'].forEach(closeModal);
+      closeConnectPopup();
     }
   });
 
-  // Clear error on input
+  // ===== CLEAR ERROR ON INPUT =====
   document.querySelectorAll('input, select').forEach(el => {
     el.addEventListener('input', () => {
       const g = el.closest('.form-group');
       if (g) { g.classList.remove('has-error'); el.classList.remove('error'); }
     });
   });
+
+  // ===== CONNECT POPUP =====
+  (function() {
+    const popup = document.getElementById('connectPopup');
+    if (!popup) return;
+
+    const shown = sessionStorage.getItem('connectPopupShown');
+    if (!shown) {
+      setTimeout(() => {
+        if (document.getElementById('enquireModal').classList.contains('active')) return;
+        popup.classList.add('active');
+        document.body.style.overflow = 'hidden';
+        sessionStorage.setItem('connectPopupShown', '1');
+      }, 4000);
+    }
+
+    popup.addEventListener('click', (e) => {
+      if (e.target === popup) closeConnectPopup();
+    });
+  })();
+
+  function closeConnectPopup() {
+    const popup = document.getElementById('connectPopup');
+    if (!popup) return;
+    popup.classList.remove('active');
+    const otherModalOpen = ['enquireModal','lightboxModal','fpModal','videoModal']
+      .some(id => document.getElementById(id)?.classList.contains('active'));
+    if (!otherModalOpen) document.body.style.overflow = '';
+  }
 </script>
 </body>
 </html>
