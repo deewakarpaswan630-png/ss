@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Indiabulls Heights Sector 104 | 2 & 3 BHK Luxury Flats on Dwarka Expressway, Gurugram</title>
   <meta name="description" content="Indiabulls Heights Dwarka Expressway, Sector 104 Gurgaon. Luxury 2 BHK + Study (1500 sq.ft) & 3 BHK (1850 sq.ft) apartments starting ₹1.95 Cr*. 17-acre project, 4 G+35 towers, 40,000 sq.ft clubhouse. Call 9718111251.">
+  <meta name="theme-color" content="#0a1628">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -13,7 +14,6 @@
     :root {
       --navy: #0a1628;
       --navy-dark: #061018;
-      --navy-mid: #122238;
       --gold: #c4a35a;
       --gold-light: #d4b86a;
       --gold-dark: #a88b3d;
@@ -24,28 +24,27 @@
       --gray-300: #d0d0d0;
       --gray-600: #666666;
       --gray-700: #444444;
-      --gray-800: #2a2a2a;
       --text: #1a1a1a;
       --shadow: 0 4px 20px rgba(0,0,0,0.08);
       --shadow-lg: 0 10px 40px rgba(0,0,0,0.15);
-      --radius: 8px;
       --transition: all 0.3s ease;
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
     body {
       font-family: 'Inter', sans-serif;
       color: var(--text);
       line-height: 1.6;
       overflow-x: hidden;
       background: var(--white);
+      -webkit-font-smoothing: antialiased;
     }
     img { max-width: 100%; height: auto; display: block; }
     a { text-decoration: none; color: inherit; }
     ul { list-style: none; }
-    button, input, select, textarea { font-family: inherit; }
-    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    button, input, select, textarea { font-family: inherit; font-size: 16px; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 
     /* ===== HEADER ===== */
     .header {
@@ -54,6 +53,7 @@
       z-index: 1000;
       background: rgba(255,255,255,0.97);
       backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
       box-shadow: 0 1px 0 rgba(0,0,0,0.06);
       transition: var(--transition);
     }
@@ -62,29 +62,29 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      height: 72px;
+      height: 64px;
       max-width: 1400px;
       margin: 0 auto;
-      padding: 0 24px;
+      padding: 0 16px;
     }
     .logo { display: flex; flex-direction: column; line-height: 1.15; }
     .logo-main {
       font-family: 'Playfair Display', serif;
-      font-size: 1.35rem;
+      font-size: 1.15rem;
       font-weight: 700;
       color: var(--navy);
       letter-spacing: -0.02em;
     }
     .logo-sub {
-      font-size: 0.55rem;
+      font-size: 0.5rem;
       font-weight: 500;
-      letter-spacing: 0.12em;
+      letter-spacing: 0.1em;
       text-transform: uppercase;
       color: var(--gold);
     }
-    .nav { display: flex; align-items: center; gap: 22px; }
+    .nav { display: flex; align-items: center; gap: 20px; }
     .nav a {
-      font-size: 0.83rem;
+      font-size: 0.82rem;
       font-weight: 500;
       color: var(--gray-700);
       transition: color 0.2s;
@@ -98,15 +98,15 @@
       height: 2px;
       background: var(--gold);
     }
-    .header-actions { display: flex; align-items: center; gap: 12px; }
+    .header-actions { display: flex; align-items: center; gap: 8px; }
     .btn-phone {
       display: flex;
       align-items: center;
-      gap: 8px;
-      padding: 8px 16px;
+      gap: 6px;
+      padding: 8px 14px;
       border: 1.5px solid var(--gray-300);
       border-radius: 6px;
-      font-size: 0.85rem;
+      font-size: 0.8rem;
       font-weight: 500;
       color: var(--navy);
       transition: var(--transition);
@@ -117,13 +117,14 @@
     .btn-gold {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
-      padding: 10px 22px;
+      justify-content: center;
+      gap: 6px;
+      padding: 10px 18px;
       background: var(--gold);
       color: var(--white);
       border: none;
       border-radius: 6px;
-      font-size: 0.875rem;
+      font-size: 0.82rem;
       font-weight: 600;
       cursor: pointer;
       transition: var(--transition);
@@ -133,13 +134,14 @@
     .btn-outline {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
-      padding: 10px 22px;
+      justify-content: center;
+      gap: 6px;
+      padding: 10px 18px;
       background: transparent;
       color: var(--white);
       border: 1.5px solid rgba(255,255,255,0.7);
       border-radius: 6px;
-      font-size: 0.875rem;
+      font-size: 0.82rem;
       font-weight: 500;
       cursor: pointer;
       transition: var(--transition);
@@ -148,13 +150,14 @@
     .btn-outline-dark {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
-      padding: 10px 22px;
+      justify-content: center;
+      gap: 6px;
+      padding: 10px 18px;
       background: transparent;
       color: var(--navy);
       border: 1.5px solid var(--gold);
       border-radius: 6px;
-      font-size: 0.875rem;
+      font-size: 0.82rem;
       font-weight: 500;
       cursor: pointer;
       transition: var(--transition);
@@ -171,40 +174,41 @@
     }
     .hamburger span {
       display: block;
-      width: 24px;
+      width: 22px;
       height: 2px;
       background: var(--navy);
       transition: var(--transition);
     }
-    .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+    .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(4px, 4px); }
     .hamburger.active span:nth-child(2) { opacity: 0; }
-    .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+    .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(4px, -4px); }
 
     /* Mobile Nav */
     .mobile-nav {
       display: none;
       position: fixed;
-      top: 72px; left: 0; right: 0;
+      top: 64px; left: 0; right: 0;
       background: var(--white);
-      padding: 24px;
+      padding: 16px;
       box-shadow: var(--shadow-lg);
       z-index: 999;
       flex-direction: column;
-      gap: 4px;
-      max-height: calc(100vh - 72px);
+      gap: 2px;
+      max-height: calc(100vh - 64px);
       overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
     }
     .mobile-nav.open { display: flex; }
     .mobile-nav a {
-      padding: 12px 16px;
-      font-size: 1rem;
+      padding: 12px 14px;
+      font-size: 0.95rem;
       font-weight: 500;
       color: var(--gray-700);
       border-radius: 6px;
       transition: var(--transition);
     }
     .mobile-nav a:hover { background: var(--off-white); color: var(--navy); }
-    .mobile-nav .btn-gold { margin-top: 12px; justify-content: center; }
+    .mobile-nav .btn-gold { margin-top: 10px; width: 100%; padding: 14px; }
 
     /* ===== HERO ===== */
     .hero {
@@ -212,111 +216,115 @@
       min-height: 100vh;
       display: flex;
       align-items: center;
-      padding-top: 72px;
-      background: linear-gradient(135deg, rgba(10,22,40,0.78) 0%, rgba(10,22,40,0.55) 50%, rgba(10,22,40,0.4) 100%),
+      padding-top: 64px;
+      background: linear-gradient(135deg, rgba(10,22,40,0.82) 0%, rgba(10,22,40,0.6) 50%, rgba(10,22,40,0.45) 100%),
+        /* REPLACE: Indiabulls Heights actual tower exterior / entrance image from indiabullheights.com */
         url('https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1920&q=80') center/cover no-repeat;
     }
     .hero-content {
       max-width: 1400px;
       margin: 0 auto;
-      padding: 60px 24px;
+      padding: 40px 20px;
       display: grid;
       grid-template-columns: 1fr 380px;
-      gap: 48px;
+      gap: 40px;
       align-items: center;
       width: 100%;
     }
     .hero-badge {
       display: inline-block;
-      font-size: 0.7rem;
+      font-size: 0.68rem;
       font-weight: 600;
-      letter-spacing: 0.15em;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
       color: var(--gold);
-      margin-bottom: 16px;
+      margin-bottom: 14px;
     }
     .hero h1 {
       font-family: 'Playfair Display', serif;
-      font-size: clamp(2.2rem, 4.5vw, 3.4rem);
+      font-size: clamp(1.9rem, 5vw, 3.2rem);
       font-weight: 600;
       color: var(--white);
       line-height: 1.2;
-      margin-bottom: 16px;
+      margin-bottom: 14px;
     }
     .hero h1 span { color: var(--gold-light); }
     .hero-sub {
-      font-size: 1.05rem;
+      font-size: 1rem;
       color: rgba(255,255,255,0.85);
-      margin-bottom: 20px;
+      margin-bottom: 18px;
       font-weight: 300;
     }
     .hero-price {
       display: inline-block;
-      background: rgba(196,163,90,0.15);
+      background: rgba(196,163,90,0.18);
       border: 1px solid var(--gold);
       color: var(--gold-light);
-      padding: 8px 18px;
+      padding: 8px 16px;
       border-radius: 6px;
-      font-size: 0.9rem;
+      font-size: 0.85rem;
       font-weight: 600;
-      margin-bottom: 28px;
+      margin-bottom: 24px;
     }
     .hero-features {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      margin-bottom: 36px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+      margin-bottom: 28px;
     }
     .hero-feat {
       display: flex;
       align-items: center;
       gap: 10px;
       color: rgba(255,255,255,0.9);
-      font-size: 0.8rem;
     }
     .hero-feat i {
-      width: 36px; height: 36px;
+      width: 34px; height: 34px;
       display: flex; align-items: center; justify-content: center;
       background: rgba(196,163,90,0.2);
       border-radius: 50%;
       color: var(--gold-light);
-      font-size: 0.85rem;
+      font-size: 0.8rem;
+      flex-shrink: 0;
     }
-    .hero-feat strong { display: block; font-weight: 600; font-size: 0.85rem; }
-    .hero-feat span { font-size: 0.72rem; opacity: 0.75; }
-    .hero-btns { display: flex; gap: 14px; flex-wrap: wrap; }
+    .hero-feat strong { display: block; font-weight: 600; font-size: 0.8rem; }
+    .hero-feat span { font-size: 0.68rem; opacity: 0.75; }
+    .hero-btns { display: flex; gap: 12px; flex-wrap: wrap; }
+    .hero-btns .btn-gold,
+    .hero-btns .btn-outline { flex: 1; min-width: 140px; padding: 12px 18px; }
 
     /* Callback Form */
     .callback-form {
       background: var(--white);
       border-radius: 12px;
-      padding: 28px 24px;
+      padding: 24px 20px;
       box-shadow: var(--shadow-lg);
     }
     .callback-form h3 {
       font-family: 'Playfair Display', serif;
-      font-size: 1.35rem;
+      font-size: 1.25rem;
       color: var(--navy);
       margin-bottom: 6px;
     }
     .callback-form > p {
-      font-size: 0.8rem;
+      font-size: 0.78rem;
       color: var(--gray-600);
-      margin-bottom: 20px;
+      margin-bottom: 18px;
     }
-    .form-group { margin-bottom: 14px; position: relative; }
+    .form-group { margin-bottom: 12px; position: relative; }
     .form-group input,
     .form-group select {
       width: 100%;
-      padding: 12px 14px 12px 42px;
+      padding: 12px 14px 12px 40px;
       border: 1.5px solid var(--gray-200);
       border-radius: 6px;
-      font-size: 0.875rem;
+      font-size: 0.9rem;
       color: var(--text);
       background: var(--white);
       transition: var(--transition);
       outline: none;
       appearance: none;
+      -webkit-appearance: none;
     }
     .form-group select {
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23666' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
@@ -336,21 +344,20 @@
       left: 14px; top: 50%;
       transform: translateY(-50%);
       color: var(--gray-600);
-      font-size: 0.85rem;
+      font-size: 0.82rem;
       pointer-events: none;
     }
     .form-group .error-msg {
       display: none;
-      font-size: 0.72rem;
+      font-size: 0.7rem;
       color: #e74c3c;
       margin-top: 4px;
     }
     .form-group.has-error .error-msg { display: block; }
     .callback-form .btn-gold {
       width: 100%;
-      justify-content: center;
       padding: 14px;
-      font-size: 0.95rem;
+      font-size: 0.9rem;
       margin-top: 4px;
     }
     .form-secure {
@@ -358,85 +365,63 @@
       align-items: center;
       justify-content: center;
       gap: 6px;
-      margin-top: 14px;
-      font-size: 0.72rem;
+      margin-top: 12px;
+      font-size: 0.7rem;
       color: var(--gray-600);
     }
     .form-secure i { color: var(--gold); }
-    .form-success {
-      display: none;
-      text-align: center;
-      padding: 20px 0;
-    }
+    .form-success { display: none; text-align: center; padding: 20px 0; }
     .form-success.show { display: block; }
-    .form-success i {
-      font-size: 2.5rem;
-      color: #27ae60;
-      margin-bottom: 12px;
-    }
-    .form-success h4 {
-      font-size: 1.1rem;
-      color: var(--navy);
-      margin-bottom: 6px;
-    }
-    .form-success p { font-size: 0.85rem; color: var(--gray-600); }
+    .form-success i { font-size: 2.4rem; color: #27ae60; margin-bottom: 12px; }
+    .form-success h4 { font-size: 1.05rem; color: var(--navy); margin-bottom: 6px; }
+    .form-success p { font-size: 0.82rem; color: var(--gray-600); }
 
     /* ===== HIGHLIGHTS STRIP ===== */
     .highlights {
       background: var(--white);
       border-bottom: 1px solid var(--gray-200);
-      padding: 28px 0;
+      padding: 20px 0;
     }
     .highlights-grid {
       display: grid;
       grid-template-columns: repeat(5, 1fr);
-      gap: 16px;
+      gap: 12px;
       max-width: 1200px;
       margin: 0 auto;
-      padding: 0 24px;
+      padding: 0 20px;
     }
     .highlight-item {
       display: flex;
       align-items: center;
-      gap: 14px;
-      padding: 8px 12px;
+      gap: 10px;
+      padding: 6px 8px;
       border-right: 1px solid var(--gray-200);
     }
     .highlight-item:last-child { border-right: none; }
-    .highlight-item i {
-      font-size: 1.4rem;
-      color: var(--navy);
-      width: 40px;
-      text-align: center;
-    }
-    .highlight-item strong {
-      display: block;
-      font-size: 0.85rem;
-      font-weight: 600;
-      color: var(--navy);
-    }
-    .highlight-item span { font-size: 0.72rem; color: var(--gray-600); }
+    .highlight-item i { font-size: 1.2rem; color: var(--navy); width: 30px; text-align: center; flex-shrink: 0; }
+    .highlight-item strong { display: block; font-size: 0.78rem; font-weight: 600; color: var(--navy); }
+    .highlight-item span { font-size: 0.68rem; color: var(--gray-600); }
 
     /* ===== SECTION COMMON ===== */
-    .section { padding: 80px 0; }
+    .section { padding: 56px 0; }
     .section-label {
-      font-size: 0.75rem;
+      font-size: 0.7rem;
       font-weight: 600;
-      letter-spacing: 0.15em;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
       color: var(--gold);
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
     .section-title {
       font-family: 'Playfair Display', serif;
-      font-size: clamp(1.8rem, 3vw, 2.4rem);
+      font-size: clamp(1.5rem, 4.5vw, 2.2rem);
       font-weight: 600;
       color: var(--navy);
       line-height: 1.25;
-      margin-bottom: 16px;
+      margin-bottom: 14px;
     }
     .section-desc {
-      font-size: 1rem;
+      font-size: 0.92rem;
       color: var(--gray-600);
       line-height: 1.7;
       max-width: 540px;
@@ -446,24 +431,20 @@
     .overview { background: var(--off-white); }
     .overview-grid {
       display: grid;
-      grid-template-columns: 1fr 1.2fr;
-      gap: 48px;
+      grid-template-columns: 1fr 1.15fr;
+      gap: 40px;
       align-items: center;
     }
     .overview-text p {
-      font-size: 0.95rem;
+      font-size: 0.9rem;
       color: var(--gray-600);
       line-height: 1.75;
-      margin-bottom: 20px;
+      margin-bottom: 16px;
     }
-    .overview-media-wrap {
-      position: relative;
-      border-radius: 12px;
-      overflow: hidden;
-    }
+    .overview-media-wrap { position: relative; border-radius: 12px; overflow: hidden; }
     .overview-media-wrap > img {
       width: 100%;
-      height: 400px;
+      height: 380px;
       object-fit: cover;
       border-radius: 12px;
     }
@@ -471,7 +452,7 @@
       position: absolute;
       top: 50%; left: 50%;
       transform: translate(-50%, -50%);
-      width: 64px; height: 64px;
+      width: 60px; height: 60px;
       background: rgba(255,255,255,0.95);
       border-radius: 50%;
       display: flex; align-items: center; justify-content: center;
@@ -481,130 +462,106 @@
       box-shadow: 0 4px 20px rgba(0,0,0,0.25);
     }
     .play-btn:hover { transform: translate(-50%, -50%) scale(1.1); }
-    .play-btn i { color: var(--navy); font-size: 1.3rem; margin-left: 3px; }
+    .play-btn i { color: var(--navy); font-size: 1.2rem; margin-left: 3px; }
     .overview-features-panel {
       background: var(--navy);
       border-radius: 12px;
-      padding: 28px 24px;
+      padding: 24px 20px;
       display: flex;
       flex-direction: column;
-      gap: 22px;
+      gap: 18px;
       margin-top: -1px;
     }
-    .ov-feat { display: flex; align-items: center; gap: 14px; color: var(--white); }
+    .ov-feat { display: flex; align-items: center; gap: 12px; color: var(--white); }
     .ov-feat i {
-      width: 40px; height: 40px;
+      width: 38px; height: 38px;
       display: flex; align-items: center; justify-content: center;
       background: rgba(196,163,90,0.15);
       border-radius: 8px;
       color: var(--gold);
-      font-size: 1rem;
+      font-size: 0.95rem;
+      flex-shrink: 0;
     }
-    .ov-feat strong { display: block; font-size: 0.85rem; font-weight: 600; }
-    .ov-feat span { font-size: 0.72rem; opacity: 0.65; }
+    .ov-feat strong { display: block; font-size: 0.82rem; font-weight: 600; }
+    .ov-feat span { font-size: 0.7rem; opacity: 0.65; }
 
-    /* ===== SPECIFICATIONS TABLE ===== */
+    /* ===== SPECIFICATIONS ===== */
     .specs { background: var(--white); }
     .specs-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 40px;
+      gap: 32px;
       align-items: start;
     }
+    .spec-table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; border-radius: 12px; box-shadow: var(--shadow); }
     .spec-table {
       width: 100%;
+      min-width: 320px;
       border-collapse: collapse;
       background: var(--white);
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: var(--shadow);
     }
     .spec-table tr { border-bottom: 1px solid var(--gray-200); }
     .spec-table tr:last-child { border-bottom: none; }
-    .spec-table td {
-      padding: 14px 20px;
-      font-size: 0.9rem;
-    }
+    .spec-table td { padding: 12px 16px; font-size: 0.85rem; }
     .spec-table td:first-child {
       color: var(--gray-600);
       font-weight: 500;
       width: 45%;
       background: var(--gray-100);
     }
-    .spec-table td:last-child {
-      color: var(--navy);
-      font-weight: 600;
-    }
-    .spec-side { display: flex; flex-direction: column; gap: 20px; }
+    .spec-table td:last-child { color: var(--navy); font-weight: 600; }
+    .spec-side { display: flex; flex-direction: column; gap: 16px; }
     .spec-card {
       background: var(--navy);
       color: var(--white);
       border-radius: 12px;
-      padding: 24px;
+      padding: 22px;
     }
-    .spec-card h4 {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.2rem;
-      margin-bottom: 8px;
-    }
-    .spec-card p { font-size: 0.85rem; opacity: 0.75; line-height: 1.6; }
+    .spec-card h4 { font-family: 'Playfair Display', serif; font-size: 1.1rem; margin-bottom: 8px; }
+    .spec-card p { font-size: 0.82rem; opacity: 0.75; line-height: 1.6; }
     .spec-card .price-tag {
-      font-size: 1.6rem;
+      font-size: 1.5rem;
       font-weight: 700;
       color: var(--gold-light);
-      margin: 12px 0 4px;
+      margin: 10px 0 4px;
       font-family: 'Playfair Display', serif;
     }
 
     /* ===== PRICE LIST ===== */
     .pricelist { background: var(--off-white); }
+    .price-table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; border-radius: 12px; box-shadow: var(--shadow-lg); margin-top: 28px; }
     .price-table {
       width: 100%;
+      min-width: 480px;
       border-collapse: collapse;
       background: var(--white);
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: var(--shadow-lg);
-      margin-top: 32px;
     }
-    .price-table thead {
-      background: var(--navy);
-      color: var(--white);
-    }
+    .price-table thead { background: var(--navy); color: var(--white); }
     .price-table th {
-      padding: 16px 20px;
+      padding: 14px 16px;
       text-align: left;
-      font-size: 0.85rem;
+      font-size: 0.78rem;
       font-weight: 600;
       letter-spacing: 0.03em;
       text-transform: uppercase;
     }
     .price-table td {
-      padding: 18px 20px;
-      font-size: 0.95rem;
+      padding: 16px;
+      font-size: 0.9rem;
       border-bottom: 1px solid var(--gray-200);
       color: var(--gray-700);
     }
     .price-table tr:last-child td { border-bottom: none; }
     .price-table tr:hover td { background: var(--off-white); }
-    .price-table .price-col {
-      font-weight: 700;
-      color: var(--gold-dark);
-      font-size: 1rem;
-    }
-    .price-note {
-      font-size: 0.78rem;
-      color: var(--gray-600);
-      margin-top: 14px;
-      font-style: italic;
-    }
+    .price-table .price-col { font-weight: 700; color: var(--gold-dark); font-size: 0.95rem; }
+    .price-note { font-size: 0.75rem; color: var(--gray-600); margin-top: 12px; font-style: italic; }
 
     /* ===== AMENITIES ===== */
     .amenities-header {
       display: flex;
       justify-content: space-between;
       align-items: flex-end;
-      margin-bottom: 40px;
+      margin-bottom: 32px;
       flex-wrap: wrap;
       gap: 16px;
     }
@@ -612,7 +569,7 @@
     .amenities-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 16px;
+      gap: 12px;
     }
     .amenity-card {
       position: relative;
@@ -621,25 +578,22 @@
       aspect-ratio: 3/4;
       cursor: pointer;
     }
-    .amenity-card img {
-      width: 100%; height: 100%;
-      object-fit: cover;
-      transition: transform 0.5s ease;
-    }
+    .amenity-card img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
     .amenity-card:hover img { transform: scale(1.08); }
     .amenity-card::after {
       content: '';
       position: absolute;
       inset: 0;
-      background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 55%);
+      background: linear-gradient(to top, rgba(0,0,0,0.82) 0%, transparent 55%);
     }
     .amenity-label {
       position: absolute;
-      bottom: 16px; left: 14px; right: 14px;
+      bottom: 12px; left: 12px; right: 12px;
       z-index: 2;
       color: var(--white);
-      font-size: 0.85rem;
+      font-size: 0.8rem;
       font-weight: 600;
+      line-height: 1.3;
     }
 
     /* ===== LOCATION ===== */
@@ -647,173 +601,129 @@
     .location-grid {
       display: grid;
       grid-template-columns: 1.1fr 1fr;
-      gap: 40px;
+      gap: 32px;
       align-items: start;
     }
     .location-img {
       position: relative;
       border-radius: 12px;
       overflow: hidden;
-      height: 460px;
+      height: 420px;
     }
     .location-img img { width: 100%; height: 100%; object-fit: cover; }
     .location-img-badge {
       position: absolute;
-      bottom: 20px; left: 20px;
+      bottom: 16px; left: 16px;
       background: rgba(10,22,40,0.9);
       color: var(--white);
-      padding: 10px 16px;
+      padding: 8px 14px;
       border-radius: 6px;
-      font-size: 0.75rem;
+      font-size: 0.7rem;
       font-weight: 600;
       letter-spacing: 0.05em;
+      line-height: 1.4;
     }
-    .location-content .section-title { margin-bottom: 12px; }
-    .location-content > p {
-      font-size: 0.9rem;
-      color: var(--gray-600);
-      margin-bottom: 28px;
-      line-height: 1.7;
-    }
+    .location-content .section-title { margin-bottom: 10px; }
+    .location-content > p { font-size: 0.88rem; color: var(--gray-600); margin-bottom: 24px; line-height: 1.7; }
     .location-points {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 18px;
-      margin-bottom: 28px;
+      gap: 14px;
+      margin-bottom: 24px;
     }
-    .loc-point { display: flex; align-items: flex-start; gap: 12px; }
+    .loc-point { display: flex; align-items: flex-start; gap: 10px; }
     .loc-point i {
-      width: 36px; height: 36px;
+      width: 34px; height: 34px;
       display: flex; align-items: center; justify-content: center;
       background: rgba(196,163,90,0.12);
       border-radius: 8px;
       color: var(--gold);
-      font-size: 0.9rem;
+      font-size: 0.85rem;
       flex-shrink: 0;
     }
-    .loc-point strong {
-      display: block;
-      font-size: 0.85rem;
-      font-weight: 600;
-      color: var(--navy);
-    }
-    .loc-point span { font-size: 0.75rem; color: var(--gray-600); }
+    .loc-point strong { display: block; font-size: 0.8rem; font-weight: 600; color: var(--navy); }
+    .loc-point span { font-size: 0.7rem; color: var(--gray-600); }
     .location-map-card {
       background: var(--white);
       border-radius: 10px;
-      padding: 20px;
+      padding: 16px;
       box-shadow: var(--shadow);
       display: flex;
       align-items: center;
-      gap: 16px;
+      gap: 14px;
+      flex-wrap: wrap;
     }
     .map-pin {
-      width: 48px; height: 48px;
+      width: 44px; height: 44px;
       background: rgba(196,163,90,0.12);
       border-radius: 50%;
       display: flex; align-items: center; justify-content: center;
       color: var(--gold);
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       flex-shrink: 0;
     }
-    .map-info strong { display: block; font-size: 0.9rem; color: var(--navy); }
-    .map-info span { font-size: 0.75rem; color: var(--gray-600); }
-    .location-map-card .btn-gold { margin-left: auto; padding: 8px 16px; font-size: 0.8rem; }
+    .map-info strong { display: block; font-size: 0.85rem; color: var(--navy); }
+    .map-info span { font-size: 0.7rem; color: var(--gray-600); }
+    .location-map-card .btn-gold { margin-left: auto; padding: 8px 14px; font-size: 0.78rem; }
 
     /* ===== WHY CHOOSE ===== */
     .why { background: var(--white); }
     .why-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-      margin-top: 40px;
+      gap: 20px;
+      margin-top: 32px;
     }
     .why-card {
       background: var(--off-white);
       border-radius: 12px;
-      padding: 28px 24px;
+      padding: 24px 20px;
       border-left: 4px solid var(--gold);
       transition: var(--transition);
     }
-    .why-card:hover {
-      box-shadow: var(--shadow-lg);
-      transform: translateY(-4px);
-      background: var(--white);
-    }
-    .why-card i {
-      font-size: 1.6rem;
-      color: var(--gold);
-      margin-bottom: 16px;
-    }
-    .why-card h4 {
-      font-size: 1rem;
-      font-weight: 600;
-      color: var(--navy);
-      margin-bottom: 8px;
-    }
-    .why-card p { font-size: 0.85rem; color: var(--gray-600); line-height: 1.6; }
+    .why-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-4px); background: var(--white); }
+    .why-card i { font-size: 1.5rem; color: var(--gold); margin-bottom: 14px; }
+    .why-card h4 { font-size: 0.95rem; font-weight: 600; color: var(--navy); margin-bottom: 8px; }
+    .why-card p { font-size: 0.82rem; color: var(--gray-600); line-height: 1.6; }
 
     /* ===== FLOOR PLANS ===== */
     .floorplans-header {
       display: flex;
       justify-content: space-between;
       align-items: flex-end;
-      margin-bottom: 40px;
+      margin-bottom: 32px;
       flex-wrap: wrap;
       gap: 16px;
     }
     .floorplans-grid {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
-      gap: 28px;
+      gap: 24px;
       align-items: start;
     }
-    .fp-intro p {
-      font-size: 0.95rem;
-      color: var(--gray-600);
-      line-height: 1.7;
-      margin-bottom: 24px;
-    }
+    .fp-intro p { font-size: 0.9rem; color: var(--gray-600); line-height: 1.7; margin-bottom: 20px; }
     .fp-card {
       background: var(--white);
       border: 1.5px solid var(--gray-200);
       border-radius: 12px;
-      padding: 24px;
+      padding: 22px;
       transition: var(--transition);
       text-align: center;
     }
-    .fp-card:hover {
-      box-shadow: var(--shadow-lg);
-      border-color: var(--gold);
-      transform: translateY(-4px);
-    }
+    .fp-card:hover { box-shadow: var(--shadow-lg); border-color: var(--gold); transform: translateY(-4px); }
     .fp-card img {
       width: 100%;
-      height: 180px;
+      height: 160px;
       object-fit: contain;
-      margin-bottom: 16px;
+      margin-bottom: 14px;
       background: var(--gray-100);
       border-radius: 8px;
-      padding: 12px;
+      padding: 10px;
     }
-    .fp-card h4 {
-      font-size: 1.1rem;
-      font-weight: 600;
-      color: var(--navy);
-      margin-bottom: 4px;
-    }
-    .fp-card .fp-size {
-      font-size: 0.8rem;
-      color: var(--gray-600);
-      margin-bottom: 6px;
-    }
-    .fp-card .fp-price {
-      font-size: 0.9rem;
-      font-weight: 700;
-      color: var(--gold-dark);
-      margin-bottom: 16px;
-    }
-    .fp-card .btn-gold { width: 100%; justify-content: center; }
+    .fp-card h4 { font-size: 1rem; font-weight: 600; color: var(--navy); margin-bottom: 4px; }
+    .fp-card .fp-size { font-size: 0.78rem; color: var(--gray-600); margin-bottom: 6px; }
+    .fp-card .fp-price { font-size: 0.88rem; font-weight: 700; color: var(--gold-dark); margin-bottom: 14px; }
+    .fp-card .btn-gold { width: 100%; }
 
     /* ===== GALLERY ===== */
     .gallery { background: var(--off-white); }
@@ -821,14 +731,14 @@
       display: flex;
       justify-content: space-between;
       align-items: flex-end;
-      margin-bottom: 36px;
+      margin-bottom: 28px;
       flex-wrap: wrap;
       gap: 16px;
     }
     .gallery-grid {
       display: grid;
       grid-template-columns: repeat(6, 1fr);
-      gap: 12px;
+      gap: 10px;
     }
     .gallery-item {
       position: relative;
@@ -837,11 +747,7 @@
       aspect-ratio: 4/3;
       cursor: pointer;
     }
-    .gallery-item img {
-      width: 100%; height: 100%;
-      object-fit: cover;
-      transition: transform 0.4s ease;
-    }
+    .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease; }
     .gallery-item:hover img { transform: scale(1.06); }
     .gallery-item::after {
       content: '';
@@ -856,7 +762,7 @@
       top: 50%; left: 50%;
       transform: translate(-50%, -50%) scale(0);
       color: var(--white);
-      font-size: 1.5rem;
+      font-size: 1.4rem;
       z-index: 2;
       transition: var(--transition);
     }
@@ -865,110 +771,87 @@
     /* ===== FLOATING CALL BUTTON ===== */
     .float-call {
       position: fixed;
-      bottom: 24px; left: 24px;
+      bottom: 16px; left: 16px;
       z-index: 1500;
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 8px;
       background: var(--gold);
       color: var(--white);
-      padding: 12px 20px;
+      padding: 12px 18px;
       border-radius: 50px;
-      font-size: 0.85rem;
+      font-size: 0.82rem;
       font-weight: 600;
       box-shadow: 0 6px 24px rgba(196,163,90,0.5);
       transition: var(--transition);
     }
     .float-call:hover { background: var(--gold-dark); transform: translateY(-3px); }
-    .float-call i { font-size: 1rem; }
 
     /* ===== FOOTER ===== */
-    .footer {
-      background: var(--navy-dark);
-      color: rgba(255,255,255,0.8);
-      padding-top: 64px;
-    }
+    .footer { background: var(--navy-dark); color: rgba(255,255,255,0.8); padding-top: 48px; }
     .footer-grid {
       display: grid;
       grid-template-columns: 1.4fr 1fr 1.2fr 1.4fr 1.3fr;
-      gap: 36px;
+      gap: 28px;
       max-width: 1200px;
       margin: 0 auto;
-      padding: 0 24px 48px;
+      padding: 0 20px 40px;
     }
-    .footer-brand .logo-main { color: var(--white); font-size: 1.3rem; }
+    .footer-brand .logo-main { color: var(--white); font-size: 1.15rem; }
     .footer-brand .logo-sub { color: var(--gold); }
-    .footer-brand p {
-      font-size: 0.82rem;
-      line-height: 1.7;
-      margin: 16px 0 20px;
-      color: rgba(255,255,255,0.6);
-    }
-    .social-links { display: flex; gap: 10px; }
+    .footer-brand p { font-size: 0.78rem; line-height: 1.7; margin: 14px 0 16px; color: rgba(255,255,255,0.6); }
+    .social-links { display: flex; gap: 8px; }
     .social-links a {
-      width: 36px; height: 36px;
+      width: 34px; height: 34px;
       display: flex; align-items: center; justify-content: center;
       background: rgba(255,255,255,0.08);
       border-radius: 50%;
       color: rgba(255,255,255,0.7);
-      font-size: 0.85rem;
+      font-size: 0.8rem;
       transition: var(--transition);
     }
     .social-links a:hover { background: var(--gold); color: var(--white); }
-    .footer h5 {
-      font-size: 0.9rem;
-      font-weight: 600;
-      color: var(--white);
-      margin-bottom: 18px;
-      letter-spacing: 0.02em;
-    }
-    .footer-links li { margin-bottom: 10px; }
-    .footer-links a {
-      font-size: 0.82rem;
-      color: rgba(255,255,255,0.55);
-      transition: color 0.2s;
-    }
+    .footer h5 { font-size: 0.85rem; font-weight: 600; color: var(--white); margin-bottom: 14px; letter-spacing: 0.02em; }
+    .footer-links li { margin-bottom: 8px; }
+    .footer-links a { font-size: 0.78rem; color: rgba(255,255,255,0.55); transition: color 0.2s; }
     .footer-links a:hover { color: var(--gold); }
     .footer-highlights li {
       display: flex;
       align-items: center;
       gap: 8px;
-      margin-bottom: 10px;
-      font-size: 0.82rem;
+      margin-bottom: 8px;
+      font-size: 0.78rem;
       color: rgba(255,255,255,0.55);
     }
-    .footer-highlights li i { color: var(--gold); font-size: 0.65rem; }
+    .footer-highlights li i { color: var(--gold); font-size: 0.6rem; }
     .footer-contact li {
       display: flex;
       align-items: flex-start;
       gap: 10px;
-      margin-bottom: 14px;
-      font-size: 0.82rem;
+      margin-bottom: 12px;
+      font-size: 0.78rem;
       color: rgba(255,255,255,0.55);
       line-height: 1.5;
     }
-    .footer-contact li i {
-      color: var(--gold);
-      margin-top: 3px;
-      width: 16px;
-    }
+    .footer-contact li i { color: var(--gold); margin-top: 3px; width: 16px; flex-shrink: 0; }
     .footer-contact a:hover { color: var(--gold); }
     .newsletter-form { display: flex; gap: 0; margin-top: 4px; }
     .newsletter-form input {
       flex: 1;
-      padding: 11px 14px;
+      min-width: 0;
+      padding: 10px 12px;
       border: 1.5px solid rgba(255,255,255,0.15);
       border-right: none;
       border-radius: 6px 0 0 6px;
       background: rgba(255,255,255,0.05);
       color: var(--white);
-      font-size: 0.85rem;
+      font-size: 0.8rem;
       outline: none;
     }
     .newsletter-form input::placeholder { color: rgba(255,255,255,0.4); }
     .newsletter-form input:focus { border-color: var(--gold); }
     .newsletter-form button {
-      padding: 11px 16px;
+      padding: 10px 14px;
       background: var(--gold);
       border: none;
       border-radius: 0 6px 6px 0;
@@ -977,12 +860,12 @@
       transition: var(--transition);
     }
     .newsletter-form button:hover { background: var(--gold-dark); }
-    .newsletter-msg { font-size: 0.75rem; margin-top: 8px; display: none; }
+    .newsletter-msg { font-size: 0.72rem; margin-top: 8px; display: none; }
     .newsletter-msg.success { color: #2ecc71; display: block; }
     .newsletter-msg.error { color: #e74c3c; display: block; }
     .footer-bottom {
       border-top: 1px solid rgba(255,255,255,0.08);
-      padding: 18px 24px;
+      padding: 16px 20px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -991,13 +874,9 @@
       flex-wrap: wrap;
       gap: 12px;
     }
-    .footer-bottom p { font-size: 0.75rem; color: rgba(255,255,255,0.4); }
-    .footer-legal { display: flex; gap: 20px; }
-    .footer-legal a {
-      font-size: 0.75rem;
-      color: rgba(255,255,255,0.4);
-      transition: color 0.2s;
-    }
+    .footer-bottom p { font-size: 0.72rem; color: rgba(255,255,255,0.4); }
+    .footer-legal { display: flex; gap: 16px; flex-wrap: wrap; }
+    .footer-legal a { font-size: 0.72rem; color: rgba(255,255,255,0.4); transition: color 0.2s; }
     .footer-legal a:hover { color: var(--gold); }
 
     /* ===== MODALS ===== */
@@ -1012,7 +891,7 @@
       opacity: 0;
       visibility: hidden;
       transition: var(--transition);
-      padding: 24px;
+      padding: 16px;
     }
     .modal-overlay.active { opacity: 1; visibility: visible; }
     .modal-content {
@@ -1025,17 +904,18 @@
       position: relative;
       transform: scale(0.9);
       transition: transform 0.3s ease;
+      -webkit-overflow-scrolling: touch;
     }
     .modal-overlay.active .modal-content { transform: scale(1); }
     .modal-close {
       position: absolute;
-      top: 12px; right: 12px;
-      width: 36px; height: 36px;
+      top: 10px; right: 10px;
+      width: 34px; height: 34px;
       background: rgba(0,0,0,0.5);
       border: none;
       border-radius: 50%;
       color: var(--white);
-      font-size: 1.1rem;
+      font-size: 1rem;
       cursor: pointer;
       z-index: 10;
       display: flex; align-items: center; justify-content: center;
@@ -1043,30 +923,25 @@
     }
     .modal-close:hover { background: rgba(0,0,0,0.8); }
     .modal-content img { width: 100%; border-radius: 12px; }
-    .modal-body { padding: 28px; }
-    .modal-body h3 {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.4rem;
-      color: var(--navy);
-      margin-bottom: 8px;
-    }
-    .modal-body p { font-size: 0.9rem; color: var(--gray-600); }
+    .modal-body { padding: 24px 20px; }
+    .modal-body h3 { font-family: 'Playfair Display', serif; font-size: 1.2rem; color: var(--navy); margin-bottom: 8px; }
+    .modal-body p { font-size: 0.85rem; color: var(--gray-600); }
     .lightbox-img { max-height: 85vh; object-fit: contain; border-radius: 8px; }
     .video-modal .modal-content { background: #000; max-width: 900px; }
     .video-modal iframe,
     .video-modal video { width: 100%; aspect-ratio: 16/9; border: none; border-radius: 12px; }
     .enquire-modal .modal-content { max-width: 440px; }
-    .enquire-modal .callback-form { box-shadow: none; padding: 32px 28px; }
+    .enquire-modal .callback-form { box-shadow: none; padding: 28px 22px; }
 
     /* Toast */
     .toast {
       position: fixed;
-      bottom: 28px; right: 28px;
+      bottom: 80px; right: 16px;
       background: var(--navy);
       color: var(--white);
-      padding: 14px 24px;
+      padding: 12px 18px;
       border-radius: 8px;
-      font-size: 0.875rem;
+      font-size: 0.82rem;
       box-shadow: var(--shadow-lg);
       z-index: 3000;
       transform: translateY(100px);
@@ -1074,10 +949,11 @@
       transition: var(--transition);
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 8px;
+      max-width: calc(100vw - 32px);
     }
     .toast.show { transform: translateY(0); opacity: 1; }
-    .toast i { color: #2ecc71; }
+    .toast i { color: #2ecc71; flex-shrink: 0; }
 
     /* ===== RESPONSIVE ===== */
     @media (max-width: 1100px) {
@@ -1092,35 +968,58 @@
     @media (max-width: 900px) {
       .nav, .header-actions .btn-phone { display: none; }
       .hamburger { display: flex; }
-      .hero-content { grid-template-columns: 1fr; gap: 36px; }
-      .callback-form { max-width: 420px; }
-      .highlights-grid { grid-template-columns: repeat(3, 1fr); gap: 8px; }
+      .hero-content { grid-template-columns: 1fr; gap: 28px; padding: 32px 20px; }
+      .callback-form { max-width: 100%; }
+      .highlights-grid { grid-template-columns: repeat(2, 1fr); gap: 0; }
       .highlight-item { border-right: none; border-bottom: 1px solid var(--gray-200); padding: 12px 8px; }
-      .overview-grid { grid-template-columns: 1fr; }
+      .highlight-item:nth-child(odd) { border-right: 1px solid var(--gray-200); }
+      .highlight-item:last-child, .highlight-item:nth-last-child(2) { border-bottom: none; }
+      .overview-grid { grid-template-columns: 1fr; gap: 28px; }
       .overview-features-panel { flex-direction: row; flex-wrap: wrap; }
-      .location-grid { grid-template-columns: 1fr; }
-      .location-img { height: 300px; }
-      .amenities-header .section-desc { text-align: left; }
+      .ov-feat { flex: 1 1 calc(50% - 10px); }
+      .location-grid { grid-template-columns: 1fr; gap: 28px; }
+      .location-img { height: 280px; }
+      .amenities-header { flex-direction: column; align-items: flex-start; }
+      .amenities-header .section-desc { text-align: left; max-width: 100%; }
       .why-grid { grid-template-columns: 1fr; }
+      .hero-btns .btn-gold, .hero-btns .btn-outline { flex: 1 1 calc(50% - 6px); }
     }
     @media (max-width: 640px) {
-      .header-inner { height: 64px; }
-      .hero { min-height: auto; padding-bottom: 40px; }
-      .hero-content { padding: 40px 16px; }
-      .hero h1 { font-size: 1.9rem; }
-      .hero-features { gap: 14px; }
-      .highlights-grid { grid-template-columns: 1fr 1fr; }
+      .header-inner { height: 60px; padding: 0 14px; }
+      .mobile-nav { top: 60px; max-height: calc(100vh - 60px); }
+      .logo-main { font-size: 1rem; }
+      .logo-sub { font-size: 0.45rem; }
+      .hero { min-height: auto; padding: 80px 0 32px; }
+      .hero h1 { font-size: 1.7rem; }
+      .hero-sub { font-size: 0.9rem; }
+      .hero-price { font-size: 0.78rem; padding: 6px 12px; }
+      .hero-features { grid-template-columns: 1fr; gap: 10px; }
+      .hero-btns { flex-direction: column; }
+      .hero-btns .btn-gold, .hero-btns .btn-outline { width: 100%; flex: 1 1 100%; }
+      .highlights-grid { grid-template-columns: 1fr; }
+      .highlight-item { border-right: none !important; }
+      .highlight-item:last-child { border-bottom: none; }
       .amenities-grid { grid-template-columns: repeat(2, 1fr); }
       .gallery-grid { grid-template-columns: repeat(2, 1fr); }
       .floorplans-grid { grid-template-columns: 1fr; }
       .location-points { grid-template-columns: 1fr; }
-      .footer-grid { grid-template-columns: 1fr; gap: 32px; }
-      .footer-bottom { flex-direction: column; text-align: center; }
-      .section { padding: 56px 0; }
+      .footer-grid { grid-template-columns: 1fr; gap: 24px; padding: 0 16px 32px; }
+      .footer-bottom { flex-direction: column; text-align: center; padding: 14px 16px; }
+      .section { padding: 40px 0; }
       .overview-features-panel { flex-direction: column; }
-      .location-map-card { flex-wrap: wrap; }
-      .location-map-card .btn-gold { margin-left: 0; width: 100%; justify-content: center; }
-      .float-call { bottom: 16px; left: 16px; padding: 10px 16px; font-size: 0.8rem; }
+      .ov-feat { flex: 1 1 100%; }
+      .location-map-card { flex-direction: column; align-items: flex-start; }
+      .location-map-card .btn-gold { margin-left: 0; width: 100%; }
+      .map-pin { display: none; }
+      .float-call { bottom: 12px; left: 12px; padding: 10px 14px; font-size: 0.75rem; }
+      .toast { bottom: 72px; right: 12px; left: 12px; }
+      .modal-content { max-height: 92vh; }
+      .modal-body { padding: 20px 16px; }
+    }
+    @media (max-width: 360px) {
+      .logo-main { font-size: 0.9rem; }
+      .hero h1 { font-size: 1.5rem; }
+      .amenities-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -1286,6 +1185,7 @@
       </div>
       <div>
         <div class="overview-media-wrap" style="position:relative;">
+          <!-- REPLACE: Indiabulls Heights actual project rendering / tower image from indiabullheights.com -->
           <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=900&q=80" alt="Indiabulls Heights Towers" loading="lazy">
           <button class="play-btn" onclick="openVideoModal()" aria-label="Play video"><i class="fas fa-play"></i></button>
         </div>
@@ -1317,23 +1217,25 @@
   <div class="container">
     <div class="section-label">Project Specifications</div>
     <h2 class="section-title">Indiabulls Heights — Key Highlights</h2>
-    <p class="section-desc" style="margin-bottom:32px;">Everything you need to know about the project at a glance.</p>
+    <p class="section-desc" style="margin-bottom:28px;">Everything you need to know about the project at a glance.</p>
     <div class="specs-grid">
-      <table class="spec-table">
-        <tr><td>Configuration</td><td>2 BHK + Study & 3 BHK</td></tr>
-        <tr><td>Project Area</td><td>17 Acres</td></tr>
-        <tr><td>No. of Towers</td><td>4</td></tr>
-        <tr><td>No. of Floors</td><td>G+35</td></tr>
-        <tr><td>Unit Sizes</td><td>1500 sq.ft & 1850 sq.ft</td></tr>
-        <tr><td>Starting Price</td><td>₹1.95 Cr*</td></tr>
-        <tr><td>Price per sq.ft</td><td>₹13,000/sq.ft</td></tr>
-        <tr><td>Car Parking</td><td>1 Car Parking Included</td></tr>
-        <tr><td>Lifts</td><td>5 per Tower (4 Passenger + 1 Service)</td></tr>
-        <tr><td>Kitchen</td><td>Fully Modular Kitchen</td></tr>
-        <tr><td>Flooring</td><td>Vitrified Tile Flooring</td></tr>
-        <tr><td>Security</td><td>5-Tier Security with CCTV</td></tr>
-        <tr><td>Parking Levels</td><td>2-Level Basement Parking</td></tr>
-      </table>
+      <div class="spec-table-wrap">
+        <table class="spec-table">
+          <tr><td>Configuration</td><td>2 BHK + Study & 3 BHK</td></tr>
+          <tr><td>Project Area</td><td>17 Acres</td></tr>
+          <tr><td>No. of Towers</td><td>4</td></tr>
+          <tr><td>No. of Floors</td><td>G+35</td></tr>
+          <tr><td>Unit Sizes</td><td>1500 sq.ft & 1850 sq.ft</td></tr>
+          <tr><td>Starting Price</td><td>₹1.95 Cr*</td></tr>
+          <tr><td>Price per sq.ft</td><td>₹13,000/sq.ft</td></tr>
+          <tr><td>Car Parking</td><td>1 Car Parking Included</td></tr>
+          <tr><td>Lifts</td><td>5 per Tower (4 Passenger + 1 Service)</td></tr>
+          <tr><td>Kitchen</td><td>Fully Modular Kitchen</td></tr>
+          <tr><td>Flooring</td><td>Vitrified Tile Flooring</td></tr>
+          <tr><td>Security</td><td>5-Tier Security with CCTV</td></tr>
+          <tr><td>Parking Levels</td><td>2-Level Basement Parking</td></tr>
+        </table>
+      </div>
       <div class="spec-side">
         <div class="spec-card">
           <h4>Investment Starts At</h4>
@@ -1355,29 +1257,31 @@
     <div class="section-label">Price List</div>
     <h2 class="section-title">Transparent Pricing,<br>Premium Living</h2>
     <p class="section-desc">Indiabulls Heights Price List — Sector 104, Dwarka Expressway, Gurugram.</p>
-    <table class="price-table">
-      <thead>
-        <tr>
-          <th>Unit Type</th>
-          <th>Unit Area</th>
-          <th>Unit Price</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>2 BHK + Study</td>
-          <td>1500 Sq.Ft.</td>
-          <td class="price-col">₹13,000/sq.ft</td>
-        </tr>
-        <tr>
-          <td>3 BHK</td>
-          <td>1850 Sq.Ft.</td>
-          <td class="price-col">₹13,000/sq.ft</td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="price-table-wrap">
+      <table class="price-table">
+        <thead>
+          <tr>
+            <th>Unit Type</th>
+            <th>Unit Area</th>
+            <th>Unit Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>2 BHK + Study</td>
+            <td>1500 Sq.Ft.</td>
+            <td class="price-col">₹13,000/sq.ft</td>
+          </tr>
+          <tr>
+            <td>3 BHK</td>
+            <td>1850 Sq.Ft.</td>
+            <td class="price-col">₹13,000/sq.ft</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
     <p class="price-note">*Prices are indicative and subject to change. Starting from ₹1.95 Cr*. Inclusive of 1 car parking. Contact us for the latest payment plan and offers.</p>
-    <div style="margin-top:24px;text-align:center;">
+    <div style="margin-top:20px;text-align:center;">
       <button class="btn-gold" onclick="openEnquireModal()">Check Payment Plan & Reserve Your Floor →</button>
     </div>
   </div>
@@ -1391,57 +1295,69 @@
         <div class="section-label">Amenities</div>
         <h2 class="section-title">World-Class Amenities<br>for a Complete Lifestyle</h2>
       </div>
-      <div style="display:flex;flex-direction:column;align-items:flex-end;gap:12px;">
+      <div style="display:flex;flex-direction:column;align-items:flex-end;gap:10px;max-width:480px;">
         <p class="section-desc">Over 40,000 sq.ft of luxurious living space with sports, wellness, and community facilities designed for every generation.</p>
         <a href="#gallery" class="btn-outline-dark">View All Amenities →</a>
       </div>
     </div>
     <div class="amenities-grid">
       <div class="amenity-card">
+        <!-- REPLACE: Actual swimming pool image from indiabullheights.com -->
         <img src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?w=500&q=80" alt="Swimming Pool" loading="lazy">
         <div class="amenity-label">Swimming Pool</div>
       </div>
       <div class="amenity-card">
+        <!-- REPLACE: Actual gym image from indiabullheights.com -->
         <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=500&q=80" alt="Fully Equipped Gym" loading="lazy">
         <div class="amenity-label">Fully Equipped Gym</div>
       </div>
       <div class="amenity-card">
+        <!-- REPLACE: Actual landscaped garden image from indiabullheights.com -->
         <img src="https://images.unsplash.com/photo-1558904541-efa843a96f01?w=500&q=80" alt="Landscaped Gardens" loading="lazy">
         <div class="amenity-label">Landscaped Gardens</div>
       </div>
       <div class="amenity-card">
+        <!-- REPLACE: Actual clubhouse image from indiabullheights.com -->
         <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=500&q=80" alt="Grand Clubhouse" loading="lazy">
         <div class="amenity-label">40,000 sq.ft Clubhouse</div>
       </div>
       <div class="amenity-card">
+        <!-- REPLACE: Actual kids play area image from indiabullheights.com -->
         <img src="https://images.unsplash.com/photo-1566454419290-57a0589c9c51?w=500&q=80" alt="Kids Play Area" loading="lazy">
         <div class="amenity-label">Kids' Play Area</div>
       </div>
       <div class="amenity-card">
+        <!-- REPLACE: Actual tennis/badminton court image from indiabullheights.com -->
         <img src="https://images.unsplash.com/photo-1554068865-24cecd4e343f?w=500&q=80" alt="Sports Facilities" loading="lazy">
         <div class="amenity-label">Tennis & Badminton Courts</div>
       </div>
       <div class="amenity-card">
+        <!-- REPLACE: Actual yoga/meditation lawn image from indiabullheights.com -->
         <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=500&q=80" alt="Meditation and Yoga Lawns" loading="lazy">
         <div class="amenity-label">Meditation & Yoga Lawns</div>
       </div>
       <div class="amenity-card">
+        <!-- REPLACE: Actual restaurant image from indiabullheights.com -->
         <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=500&q=80" alt="Multi-Cuisine Restaurant" loading="lazy">
         <div class="amenity-label">Multi-Cuisine Restaurant</div>
       </div>
       <div class="amenity-card">
+        <!-- REPLACE: Actual spa/salon image from indiabullheights.com -->
         <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=500&q=80" alt="Spa and Salon" loading="lazy">
         <div class="amenity-label">Spa & Salon</div>
       </div>
       <div class="amenity-card">
+        <!-- REPLACE: Actual co-working space image from indiabullheights.com -->
         <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=500&q=80" alt="Co-working Spaces" loading="lazy">
         <div class="amenity-label">Modern Co-working Spaces</div>
       </div>
       <div class="amenity-card">
+        <!-- REPLACE: Actual basketball court image from indiabullheights.com -->
         <img src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=500&q=80" alt="Basketball Court" loading="lazy">
         <div class="amenity-label">Basketball Court</div>
       </div>
       <div class="amenity-card">
+        <!-- REPLACE: Actual indoor games zone image from indiabullheights.com -->
         <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=500&q=80" alt="Indoor Games Zone" loading="lazy">
         <div class="amenity-label">Indoor Games Zone</div>
       </div>
@@ -1454,6 +1370,7 @@
   <div class="container">
     <div class="location-grid">
       <div class="location-img">
+        <!-- REPLACE: Actual location/expressway image from indiabullheights.com -->
         <img src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=900&q=80" alt="Dwarka Expressway Gurugram" loading="lazy">
         <div class="location-img-badge">DWARKA EXPRESSWAY<br>GURUGRAM</div>
       </div>
@@ -1564,6 +1481,7 @@
         <a href="#gallery" class="btn-outline-dark">View All Floor Plans →</a>
       </div>
       <div class="fp-card">
+        <!-- REPLACE: Actual 2 BHK floor plan image from indiabullheights.com -->
         <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=400&q=80" alt="2 BHK + Study Floor Plan" loading="lazy">
         <h4>2 BHK + Study</h4>
         <p class="fp-size">1500 Sq.Ft.</p>
@@ -1571,6 +1489,7 @@
         <button class="btn-gold" onclick="openFloorPlan('2bhk')">View Plan →</button>
       </div>
       <div class="fp-card">
+        <!-- REPLACE: Actual 3 BHK floor plan image from indiabullheights.com -->
         <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=400&q=80" alt="3 BHK Floor Plan" loading="lazy">
         <h4>3 BHK</h4>
         <p class="fp-size">1850 Sq.Ft.</p>
@@ -1593,26 +1512,32 @@
     </div>
     <div class="gallery-grid" id="galleryGrid">
       <div class="gallery-item" onclick="openLightbox(0)">
+        <!-- REPLACE: Actual entrance gate image from indiabullheights.com -->
         <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=500&q=80" alt="Entrance Gate" loading="lazy">
         <i class="fas fa-search-plus zoom-icon"></i>
       </div>
       <div class="gallery-item" onclick="openLightbox(1)">
+        <!-- REPLACE: Actual residential towers image from indiabullheights.com -->
         <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=500&q=80" alt="Residential Towers" loading="lazy">
         <i class="fas fa-search-plus zoom-icon"></i>
       </div>
       <div class="gallery-item" onclick="openLightbox(2)">
+        <!-- REPLACE: Actual living room interior image from indiabullheights.com -->
         <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=500&q=80" alt="Luxury Interior Living Room" loading="lazy">
         <i class="fas fa-search-plus zoom-icon"></i>
       </div>
       <div class="gallery-item" onclick="openLightbox(3)">
+        <!-- REPLACE: Actual poolside view image from indiabullheights.com -->
         <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=500&q=80" alt="Poolside View" loading="lazy">
         <i class="fas fa-search-plus zoom-icon"></i>
       </div>
       <div class="gallery-item" onclick="openLightbox(4)">
+        <!-- REPLACE: Actual modern living space image from indiabullheights.com -->
         <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=500&q=80" alt="Modern Living Space" loading="lazy">
         <i class="fas fa-search-plus zoom-icon"></i>
       </div>
       <div class="gallery-item" onclick="openLightbox(5)">
+        <!-- REPLACE: Actual bedroom interior image from indiabullheights.com -->
         <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=500&q=80" alt="Premium Bedroom" loading="lazy">
         <i class="fas fa-search-plus zoom-icon"></i>
       </div>
@@ -1687,7 +1612,7 @@
     <!-- Newsletter -->
     <div>
       <h5>Newsletter</h5>
-      <p style="font-size:0.82rem;color:rgba(255,255,255,0.55);margin-bottom:14px;">Get the latest updates and offers.</p>
+      <p style="font-size:0.78rem;color:rgba(255,255,255,0.55);margin-bottom:12px;">Get the latest updates and offers.</p>
       <form class="newsletter-form" id="newsletterForm" novalidate>
         <input type="email" id="newsEmail" placeholder="Enter your email" required>
         <button type="submit" aria-label="Subscribe"><i class="fas fa-arrow-right"></i></button>
@@ -1724,6 +1649,7 @@
     <div class="modal-body">
       <h3 id="fpModalTitle">Floor Plan</h3>
       <p id="fpModalDesc" style="margin-bottom:20px;">Detailed floor plan layout. Contact us for exact dimensions and pricing.</p>
+      <!-- REPLACE: Actual floor plan image from indiabullheights.com -->
       <img id="fpModalImg" src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=800&q=80" alt="Floor Plan Detail" style="border-radius:8px;background:#f5f5f5;padding:20px;">
       <div style="margin-top:20px;text-align:center;">
         <button class="btn-gold" onclick="closeModal('fpModal');openEnquireModal()">Request Details →</button>
@@ -1737,8 +1663,8 @@
   <div class="modal-content">
     <button class="modal-close" onclick="closeVideoModal()" aria-label="Close"><i class="fas fa-times"></i></button>
     <div style="padding:8px;">
-      <div style="aspect-ratio:16/9;background:#111;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:16px;color:#fff;">
-        <i class="fas fa-play-circle" style="font-size:4rem;color:var(--gold);"></i>
+      <div style="aspect-ratio:16/9;background:#111;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:16px;color:#fff;padding:20px;text-align:center;">
+        <i class="fas fa-play-circle" style="font-size:3.5rem;color:var(--gold);"></i>
         <p style="font-size:1rem;opacity:0.8;">Project Walkthrough Video</p>
         <p style="font-size:0.8rem;opacity:0.5;">Experience Indiabulls Heights in full detail</p>
       </div>
@@ -1797,19 +1723,26 @@
 <div class="toast" id="toast"><i class="fas fa-check-circle"></i> <span id="toastMsg">Success</span></div>
 
 <script>
-  // Sticky header
+  // Sticky header + active nav
   const header = document.getElementById('header');
+  let ticking = false;
   window.addEventListener('scroll', () => {
-    header.classList.toggle('scrolled', window.scrollY > 40);
-    const sections = document.querySelectorAll('section[id]');
-    let current = '';
-    sections.forEach(s => {
-      if (window.scrollY >= s.offsetTop - 100) current = s.id;
-    });
-    document.querySelectorAll('.nav a').forEach(a => {
-      a.classList.toggle('active', a.getAttribute('href') === '#' + current);
-    });
-  });
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        header.classList.toggle('scrolled', window.scrollY > 40);
+        const sections = document.querySelectorAll('section[id]');
+        let current = '';
+        sections.forEach(s => {
+          if (window.scrollY >= s.offsetTop - 120) current = s.id;
+        });
+        document.querySelectorAll('.nav a').forEach(a => {
+          a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+        });
+        ticking = false;
+      });
+      ticking = true;
+    }
+  }, { passive: true });
 
   // Mobile menu
   const hamburger = document.getElementById('hamburger');
@@ -1824,6 +1757,10 @@
     mobileNav.classList.remove('open');
     document.body.style.overflow = '';
   }
+  // Close mobile nav on link click (in case onclick not used)
+  mobileNav.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => closeMobile());
+  });
 
   // Modal helpers
   function openModal(id) {
@@ -1895,7 +1832,8 @@
   function clearErrors(formId) {
     document.querySelectorAll('#' + formId + ' .form-group').forEach(g => {
       g.classList.remove('has-error');
-      g.querySelector('input, select')?.classList.remove('error');
+      const input = g.querySelector('input, select');
+      if (input) input.classList.remove('error');
     });
   }
 
